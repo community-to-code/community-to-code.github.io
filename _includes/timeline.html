@@ -1,0 +1,57 @@
+
+<!-- Timeline Start -->
+
+<section id="{{ page.section-type }}" class="container content-section text-center">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      {{ page.content | markdownify }}
+
+      <ul class="timeline">
+
+        {% for event in site.events %}
+          {% assign loopindex = forloop.index | modulo: 2 %}
+          {% capture class %}
+          {% if loopindex == 0 %}
+            timeline-inverted
+          {% endif %}
+          {% endcapture %}
+
+          <li class="{{ class }}">
+            <div class="timeline-image">
+              <img class="img-circle img-responsive" src="{{site.baseurl}}{{ event.image }}" alt="">
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>{{ event.date }}</h4>
+              </div>
+              <div class="timeline-body">
+                {{ event.description | markdownify }}
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="{{site.baseurl}}{{ site.timeline-img }}" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<br><br>
+  <div style="text-align: left; font-size: 20px; line-height: 1.6">
+    <b style="font-size: 25px">Planning Phase</b>: Time to get that engine revving. Get that project idea ready, document your project. Prioritize parts of the project, set thoughful deliverables and sane deadlines to achieve them. If you need help, come let's talk on slack and help each other. Inspire and motivate others by tweeting your plans with <b>#communitytocode</b> and <b>#codethroughsummer</b>.
+  </div>
+  <br>
+  <div style="text-align: left; font-size: 20px; line-height: 1.6">
+    <b style="font-size: 25px">Coding Phase</b>: With thorough plans, it's time to gear up and start your journey. Remember to follow the rules to maximize your productivity. We'll keep in touch to interact, learn, inspire and help each other. Daily tweets with <b>#communitytocode</b> and <b>#codethroughsummer</b> hashtags will help group all the work done by our community together.
+  </div>
+  <br>
+  <div style="text-align: left; font-size: 20px; line-height: 1.6">
+    <b style="font-size: 25px">Partying Phase</b>: All work and no play makes Jack a dull boy. It's time to be proud of our work. Those of us who decide to open source their projects, we'll group and promote them all.
+  </div>
+</section>
+
+<!-- Timeline End -->
