@@ -79,7 +79,7 @@ me-img: "/img/jetpacktocat.png"
 
 # To use gravatar profile pic uncomment the following line and replace 'email_hash'
 # with your gravatar profile email hash.
-# You can create the email hash by using an online tool like 'http://www.md5hashgenerator.com/'
+# You can create the email hash by using an oncline tool like 'http://www.md5hashgenerator.com/'
 # just enter your email and it will generate the hash.
 
 # me-img: "https://www.gravatar.com/avatar/email_hash?s=500"
@@ -135,15 +135,15 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
-    date: "31st August - forever"
-    description: "Maintain your project indefinitely"
   - image: "/img/timeline/baracktocat.jpg"
-    date: "1st June - 31st August "
+    date: "Day 1 - Day 15"
+    description: "Planning Phase"
+  - image: "/img/timeline/baracktocat.jpg"
+    date: "Day 15 - Day 45"
     description: "Coding Phase"
-  - image: "/img/timeline/baracktocat.jpg"
-    date: "1st April - 30th April"
-    description: "Planning Phase "
+  - image: "/img/timeline/spidertocat.png"
+    date: "Day 45 - indefinitely"
+    description: "Maintain your project indefinitely"
 
 # First image of the Timeline
 
